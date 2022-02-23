@@ -1,0 +1,18 @@
+0,Worksheet description
+"=HYPERLINK(""#'Cover sheet'!A1"", ""Cover sheet"")","Information on the ONS, mortality statistics, and weekly deaths"
+"=HYPERLINK(""#'Notes'!A1"", ""Notes"")",Notes used in this publication
+"=HYPERLINK(""#'1'!A1"", ""1"")","Weekly provisional figures on deaths registered in England and Wales, registered 2021 and 2022, with five-year averages"
+"=HYPERLINK(""#'2'!A1"", ""2"")","Weekly provisional figures on deaths registered in England and Wales by sex and age group, registered 2022"
+"=HYPERLINK(""#'3'!A1"", ""3"")","Weekly provisional figures on deaths registered in England and Wales for selected causes of death, registered 2022"
+"=HYPERLINK(""#'4'!A1"", ""4"")","Weekly provisional figures on deaths involving COVID-19 registered in England and Wales by sex and age group, registered 2022"
+"=HYPERLINK(""#'5'!A1"", ""5"")","Weekly provisional figures on death occurrences involving COVID-19 in England and Wales by sex and age group, registered 2021 and 2022"
+"=HYPERLINK(""#'6'!A1"", ""6"")","Weekly provisional figures on deaths involving COVID-19 registered in the UK, registered 2022"
+"=HYPERLINK(""#'7'!A1"", ""7"")","Weekly provisional figures on deaths involving COVID-19 registered in the UK by sex and age group, registered 2022"
+"=HYPERLINK(""#'8'!A1"", ""8"")","Daily provisional non-cumulative figures on deaths involving COVID-19 registered in the UK and by English region, registered 2021 and 2022"
+"=HYPERLINK(""#'9'!A1"", ""9"")","Daily provisional non-cumulative figures on death occurrences involving COVID-19 in the UK and by English region, registered 2021 and 2022"
+"=HYPERLINK(""#'10'!A1"", ""10"")","Weekly provisional figures on excess deaths registered in England and Wales by place of occurrence, registered in 2022"
+"=HYPERLINK(""#'11'!A1"", ""11"")","Estimated total death occurrences per week in England and Wales based on a statistical model, occurring 2022"
+"=HYPERLINK(""#'12a'!A1"", ""12a"")","Weekly provisional figures on deaths registered in England and Wales by region of usual residence, registered 2022"
+"=HYPERLINK(""#'12b'!A1"", ""12b"")","Weekly provisional figures on death occurrences involving COVID-19 in England and Wales by region of usual residence, registered 2021 and 2022"
+"=HYPERLINK(""#'13'!A1"", ""13"")","Weekly provisional figures on deaths registered in England and Wales by place of occurrence, registered between week ending 28 December 2019 and week ending 11 February 2022"
+"=HYPERLINK(""#'14'!A1"", ""14"")","Weekly provisional figures on deaths involving COVID-19 registered in England and Wales by place of occurrence, registered between week ending 28 December 2019 and week ending 11 February 2022"
