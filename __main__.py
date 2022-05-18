@@ -1,4 +1,4 @@
-''' 
+'''
 Making proprietary xlsx formats more accessible.
 
 D. Ellis 2022
@@ -22,25 +22,47 @@ src_file = args.fin[0].__str__()
 
 # Load the spreadsheet
 wb = load_workbook(filename = src_file)
+origin = src_file.split('/')[-1].split('.')[0]
 
 # Get all the sheets
 sheets = wb.sheetnames
 
 for sheet in sheets:
-    for table in wb[sheet].tables.keys():
-        dummy = wb[sheet].tables[table]
 
-        df = pd.DataFrame(wb[sheet][dummy.ref]).apply(lambda x: [y.internal_value for y in x])
+    tables = wb[sheet].tables.keys()
+
+    if len(tables):
+        for table in wb[sheet].tables.keys():
+            
+            dummy = wb[sheet].tables[table]
+
+            df = pd.DataFrame(wb[sheet][dummy.ref]).apply(lambda x: [y.internal_value for y in x])
+
+            df = df.set_index(0,inplace=False).rename(columns=df.iloc[0], inplace = False).iloc[1:]
+
+            out = args.out + '/' + origin + '_' + sheet.replace(' ','-') + '_' + table + '.csv'
+
+            df.to_csv(out)
+
+            print('Written: ' + out)
+
+    else:
+
+        import warnings
+
+        warnings.warn("NO TABLES found in sheet: " + sheet)
+        warnings.warn("If using a silly format, please label tables accordingly. \n Using default sheet as a table.")
+
+        df = pd.DataFrame(wb[sheet]).apply(lambda x: [y.internal_value for y in x])
 
         df = df.set_index(0,inplace=False).rename(columns=df.iloc[0], inplace = False).iloc[1:]
 
-        df.to_csv(args.out + '/' + sheet + '_' + table + '.csv')
+        out = args.out + '/' + origin + '_' + sheet.replace(' ','-')  + '.csv'
 
-        print(sheet, table)
+        df.to_csv(out)
 
-
-print('Finished: ' + args.out)
-
+        print('Written: ' + out)
 
 
 
+print('Finished: ' + origin)
